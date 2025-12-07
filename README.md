@@ -37,7 +37,13 @@ This project implements a custom 16-bit CPU architecture from scratch. It includ
     make fib
     ```
 
-5.  **Run all tests:**
+5.  **Run Factorial Recursion:**
+    ```bash
+    make factorial
+    ```
+    *This demonstrates recursion using a two-phase stack-based approach. See [RECURSION_README.md](RECURSION_README.md) for details.*
+
+6.  **Run all tests:**
     ```bash
     make test
     ```
@@ -80,7 +86,11 @@ The project follows a modular architecture mimicking real hardware components:
     - `timer.asm`: Demonstrates timing and loops.
     - `hello.asm`: Demonstrates string output.
     - `fibonacci.asm`: Demonstrates complex logic and input.
+    - `factorial.asm`: **[Separate Submission]** Demonstrates recursion with stack management.
+- `examples/`: C reference implementations.
+    - `factorial.c`: C version of factorial recursion.
 - `docs/`: Detailed documentation and reports.
+- **[RECURSION_README.md](RECURSION_README.md)**: Documentation for the factorial recursion project.
 
 ## 👥 Contributors
 
