@@ -34,10 +34,11 @@ clean:
 	rm -f $(PROG_DIR)/*.bin
 	@echo "Clean complete"
 
-# Aliases for convenience
+# Aliases# Shorthand targets
 timer: run-timer
 hello: run-hello
 fib: run-fib
+factorial: run-factorial
 
 # Run examples (Always verbose)
 run-timer: $(TARGET)
@@ -55,6 +56,11 @@ run-fib: $(TARGET)
 	@echo "============================="
 	./$(TARGET) -r -d $(PROG_DIR)/fibonacci.asm
 
+run-factorial: $(TARGET)
+	@echo "Running Factorial Example..."
+	@echo "============================"
+	./$(TARGET) -r -d $(PROG_DIR)/factorial.asm
+
 # Run all tests
 test: run-timer run-hello run-fib
 	@echo "\n=== All Tests Complete ==="
@@ -68,5 +74,6 @@ help:
 	@echo "  timer              - Run timer example"
 	@echo "  hello              - Run Hello World example"
 	@echo "  fib                - Run Fibonacci example (first 10 numbers)"
+	@echo "  factorial          - Run Factorial example (computes 5!)"
 	@echo "  test               - Run all examples"
 	@echo "  help               - Show this help message"
